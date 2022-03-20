@@ -1,0 +1,84 @@
+<div id="tests" class="container">
+    <h3>Tests Page</h3>
+    <div class='row container'>
+        <label class='col-sm-2'>
+            <strong>Version: </strong>
+        </label>
+        <div class='col-sm-4'>
+            <button id="versionButton"  class="mini-button mini-button-version" ></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <label class="row">
+                <strong>Azure AD Tests: </strong>
+            </label>
+        </div>
+        <div class="row">
+            <button type="button" id="signin_btn" class="mini-button  mini-button-text">SignIn</button>
+            <button type="button" id="signout_btn" class="mini-button  mini-button-text">SignOut</button>
+            <button type="button" id="isconnected_btn" class="mini-button  mini-button-text">IsConnected</button>
+            <button type="button" id="account_btn" class="mini-button  mini-button-text">Account Info</button>
+            <button type="button" id="graph_btn" class="mini-button  mini-button-text">Graph Account Info</button>
+            <button type="button" id="mail_btn" class="mini-button  mini-button-text">Mail</button>
+            <button type="button" id="cache_btn" class="mini-button  mini-button-text">Clear cache</button>
+        </div>
+        <div class="row">
+            <label class="row">
+                <strong>Input, results, errors: </strong>
+            </label>
+        </div>
+        <div class="row">
+            <label for="input" class="col-md-12">Input:</label>
+            <input type="text" class="col-md-12" id="input" placeholder="">
+        </div>
+        <div class="row">
+            <label for="output" class="col-md-12">Results:</label>
+            <input type="text" id="output" placeholder="" class="col-md-12">
+        </div>
+        <div class="row">
+            <label for="error" class="col-md-12">Error:</label>
+            <input type="text text-danger" id="error" placeholder="" class="col-md-12  mini-text-color-red">
+        </div>
+    </div>    
+    <div class="container">
+        <div class="row">
+            <label class="row">
+                <strong>Azure Storage Tests: </strong>
+            </label>
+        </div>
+        <div class="row">
+            <input type="file" id="files_btn" accept=".xls, .xlsx, .pdf, .doc, .docx, .txt" class="mini-button  mini-button-text mini-hide" />
+            <label for="files_btn" class="mini-button  mini-button-text mini-no-bottom-margin">Add files to upload</label>
+            <button type="submit" id="upload_btn" class="mini-button  mini-button-text">Upload list</button>
+        </div>
+        <table class="table display" id="upload_table" with="100%" cellspacing="0"></table>
+    </div>
+    <div class="container">
+        <div class="row">
+            <label class="row">
+                <strong>REST API Tests: </strong>
+            </label>
+        </div>
+        <div class="row">
+            <button type="button" id="api_getversion_btn" class="mini-button  mini-button-text">Get Version</button>
+            <button type="button" id="api_gettime_btn" class="mini-button  mini-button-text">Get Time</button>
+            <button type="button" id="api_gettodos_btn" class="mini-button  mini-button-text">Get ToDos</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <label class="row">
+                <strong>UI Tests: </strong>
+            </label>
+        </div>
+        <div id="div_test" class="row">
+            <button type="button" id="ui_alert_btn" class="mini-button  mini-button-text">Alert</button>
+            <button type="button" id="ui_progress_btn" class="mini-button  mini-button-text">Progress Alert</button>
+            <button type="button" id="ui_toast_btn" class="mini-button  mini-button-text">Toast</button>
+            <button type="button" id="ui_page_waiting_btn" class="mini-button  mini-button-text">Page Waiting</button>
+            <button type="button" id="ui_button_waiting_btn" class="mini-button  mini-button-text">Button Waiting</button>
+        </div>
+    </div>    
+</div>
+<script src="test-bundle.js"></script>

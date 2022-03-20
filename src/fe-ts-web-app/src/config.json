@@ -1,0 +1,45 @@
+{
+  "version": "220320.143729",
+  "clientId": "to be completed",
+  "authority": "https://login.microsoftonline.com/to be completed",
+  "redirectUri": "https://webappdubcard2929.azurewebsites.net/",
+  "cacheLocation": "sessionStorage",
+  "storeAuthStateInCookie": false,
+  "loginRequest": {
+    "scopes": [
+      "openid",
+      "profile",
+      "User.Read"
+    ]
+  },
+  "tokenStorageRequest": {
+    "scopes": [
+      "User.Read",
+      "Mail.Read",
+      "https://storage.azure.com/user_impersonation"
+    ]
+  },
+  "tokenAPIRequest": {
+    "scopes": [
+      "api://to be completed/user_impersonation"
+    ]
+  },
+  "graphMeEndpoint": "https://graph.microsoft.com/v1.0/me",
+  "graphMailEndpoint": "https://graph.microsoft.com/v1.0/me/messages",
+  "tenantId": "to be completed",
+  "storageAccountName": "mini2424",
+  "storageContainerName": "inputmini2424",
+  "storageSASToken": "",
+  "apiEndpoint": "https://funcmini2424.azurewebsites.net/",
+  "apiGridwichEndpoint": "to be completed",
+  "logLevel": "debug",
+  "todoFolder": "todos/{todo-id}",
+  "todoExtensions": [
+    "pdf",
+    "docs",
+    "doc",
+    "txt",
+    "json",
+    "xml"
+  ]
+}

@@ -1,0 +1,154 @@
+<div id="todo" class="container">
+    <h3 id="ToDoPageTitle">ToDo Page</h3>
+    <!-- Modal -->
+    <div class="modal fade" id="removeToDoModal" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="removeModalLabel">Remove ToDo</h5>
+            <!--
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            -->
+
+            </div>
+            <div class="modal-body">
+                <label id="removeMessage" class="col-form-label">Are you sure you want to remove ToDo(s)?</label>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="mini-button mini-button-text" id="removeCancel">Cancel</button>
+            <button type="button" class="mini-button mini-button-text" id="removeOk">Remove</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addToDoModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="addModalLabel">Add ToDo</h5>
+            <!--
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            -->
+            </div>
+            <div class="modal-body">
+                <!--<form>-->
+                    <div class="form-group">
+                        <label for="addToDoId" class="col-form-label">Guid:</label>
+                        <input type="text" class="form-control" id="addToDoId" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="addToDoName" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="addToDoName">
+                    </div>
+                    <div>
+                        <input type="file" id="addSelectFile" accept=".xls, .xlsx, .pdf, .doc, .docx, .txt" class="mini-button  mini-button-text mini-hide" />
+                        <label for="addSelectFile" class="mini-button  mini-button-text mini-no-bottom-margin">Select file</label>
+                        <button type="submit" id="addUploadFile" class="mini-button  mini-button-text">Upload</button>
+                    </div>
+                    <table class="table display" id="addUploadFilesTable" with="100%" cellspacing="0"></table>
+
+                    <div class="form-group">
+                        <label for="addToDoUri" class="col-form-label">Uri:</label>
+                        <input type="text" class="form-control" id="addToDoUri" readonly>
+                    </div>                
+            </div>  
+            <div class="modal-body">
+                <label id="addMessage" class="col-form-label"></label>
+                <label id="addError" class="col-form-label mini-text-color-red"></label>    
+            </div>            
+            <div class="modal-footer">
+            <button type="button" class="mini-button mini-button-text" id="addCancel">Cancel</button>
+            <button type="button" class="mini-button mini-button-text" id="addOk">Add</button>
+            </div>
+        </div>
+        </div>
+    </div>        
+    <div class="modal fade" id="updateToDoModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="updateModalLabel">Update ToDo</h5>
+            <!--
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            -->
+
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="updateToDoId" class="col-form-label">Guid:</label>
+                        <input type="text" class="form-control" id="updateToDoId" readonly>
+                    </div>
+                  <div class="form-group">
+                    <label for="updateToDoName" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control" id="updateToDoName">
+                  </div>
+                  <div>
+                    <input type="file" id="updateSelectFile" accept=".xls, .xlsx, .pdf, .doc, .docx, .txt" class="mini-button  mini-button-text mini-hide" />
+                    <label for="updateSelectFile" class="mini-button  mini-button-text mini-no-bottom-margin" >Select file</label>
+                    <button type="submit" id="updateUploadFile" class="mini-button  mini-button-text">Upload</button>
+                  </div>
+                  <table class="table display" id="updateUploadFilesTable" with="100%" cellspacing="0"></table>
+
+                  <div class="form-group">
+                    <label for="updateToDoUri" class="col-form-label">Uri:</label>
+                    <input type="text" class="form-control" id="updateToDoUri" readonly>
+                  </div>
+            </div>  
+            <div class="modal-body">
+                <label id="updateMessage" class="col-form-label"></label>
+                <label id="updateError" class="col-form-label mini-text-color-red"></label>    
+            </div>                        
+            <div class="modal-footer">
+            <button type="button" class="mini-button mini-button-text" id="updateCancel">Cancel</button>
+            <button type="button" class="mini-button mini-button-text" id="updateOk" >Update</button>
+            </div>
+        </div>
+        </div>
+    </div>        
+    <div class='row container'>
+        <label class='col-sm-2' >
+            <strong id="ToDoPageVersion">Version: </strong>
+        </label>
+        <div class='col-sm-4'>
+            <button id="versionButton"  class="mini-button mini-button-version" >                
+            </button>
+        </div>
+        <div id="todoWaiting">
+            <label id="todoMessage" class="col-form-label"></label>
+            <label id="todoError" class="col-form-label mini-text-color-red"></label>
+        </div>
+
+    </div>
+</div>    
+<div class="container">
+    <div class="row">
+        <button type="button" id="addToDo" class="mini-button  mini-button-text"  data-toggle="modal"  >Add</button>
+        <button type="button" id="updateToDo" class="mini-button  mini-button-text" data-toggle="modal" >Update</button>
+        <button type="button" id="removeToDo" class="mini-button  mini-button-text" data-toggle="modal"  >Remove</button>
+        <div class="col-12">
+
+            <table id="todoTableId" >
+<!--
+            <table id="todoTableId" data-pagination="true" data-search="true" data-resizable="true" >
+
+                <thead>
+                    <tr>
+                        <th data-checkbox="true"></th>
+                        <th data-sortable="true" data-field="name" >Name</th>
+                        <th data-sortable="true" data-field="uri">Uri</th>
+                        <th data-sortable="true" data-field="id">Id</th>
+                        <th data-sortable="true" data-field="creationDate">Creation</th>
+                    </tr>
+                </thead>
+            -->
+            </table>
+        </div>           
+    </div>  
+</div>  
+<script src="todo-bundle.js"></script>
