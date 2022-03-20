@@ -40,10 +40,6 @@ type AppGlobalConfig = {
     logLevel: string;
     todoFolder: string;
     todoExtensions: Array<string>;
-    styleFolder: string;
-    styleExtensions: Array<string>;
-    exportFolder: string;
-    exportExtensions: Array<string>;
 };
 
 declare global {
@@ -77,9 +73,5 @@ globalThis.globalConfiguration = {
     logLevel: config.logLevel,
     todoFolder: config.todoFolder,
     todoExtensions: config.todoExtensions,
-    styleFolder: config.styleFolder,
-    styleExtensions: config.styleExtensions,
-    exportFolder: config.exportFolder,
-    exportExtensions: config.exportExtensions
 };
 export { };

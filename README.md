@@ -40,6 +40,36 @@ Check document [here](./docs/devcontainer.md)
 
 Check document [here](./docs/deployinfra.md)
 
+## User Experience
+
+Below some screenshots related to the User Experience using the frontend application:
+
+### Home Page
+
+![Home](./docs/img/readme/home.png)
+
+### ToDo Page
+
+This page is used to create, update and remove ToDo items which include a link to a file loaded on Azure Storage while creating the item.
+
+![ToDo](./docs/img/readme/todo.png)
+
+### Settings Page
+
+The settings page allows the user to change the Application Theme, the default language, the pagination size and the use of cache or not.
+
+![Tests](./docs/img/readme/settings.png)
+
+### Settings Page
+
+This page is used to test the following topics:
+- Azure AD Authentication (login/logout)
+- Access to Azure Storage to upload files
+- Access to the REST API with authentication token
+- Test some UI elements 
+
+![Tests](./docs/img/readme/tests.png)
+
 ## Next steps:
 Frontend:
 - Improve frontend to support bootstrap version 5.0
